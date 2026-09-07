@@ -10,7 +10,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza todo o conteúdo horizontalmente */
+    align-items: center;
     padding: 40px 20px;
     color: #FFFFFF;
 }
@@ -26,44 +26,63 @@ body {
 .icon-profile {
     margin-top: 10px;
     margin-bottom: 16px;
-    height: 150px;
-    width: 150px;
-    border: 3px solid #00E5FF;
+    height: 110px;
+    width: 110px;
+    border: 2px solid #00E5FF;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 0 25px rgba(0, 229, 255, 0.25);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
 }
 
 .profile-name {
     color: #FFFFFF;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
     letter-spacing: 0.5px;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     text-align: center;
 }
 
 .links-container {
     width: 100%;
-    max-width: 400px; /* Impede que os botões estiquem na tela toda no desktop */
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    margin: 0 auto; /* Garante a centralização absoluta do bloco */
+    margin: 0 auto;
 }
 
 .links {
     text-decoration: none;
     padding: 16px 24px;
-    width: 100%; /* Ocupa 100% do limite de 400px do container */
+    width: 100%;
     background-color: #FFE600;
     color: #1A1A1A;
     border-radius: 50px;
     font-weight: 600;
-    font-size: 1.05rem;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    transition: transform
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.links:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 230, 0, 0.25);
+    border-color: #00E5FF;
+}
+
+.image-link {
+    width: 18px;
+    height: 18px;
+    max-width: 18px;
+    max-height: 18px;
+    object-fit: contain;
+    position: absolute;
+    left: 24px;
+    flex-shrink: 0;
+}
