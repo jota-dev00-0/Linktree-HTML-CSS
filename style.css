@@ -10,7 +10,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Centraliza todo o conteúdo horizontalmente */
     padding: 40px 20px;
     color: #FFFFFF;
 }
@@ -21,18 +21,17 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 450px; /* Controla a largura máxima para responsividade */
 }
 
 .icon-profile {
     margin-top: 10px;
     margin-bottom: 16px;
-    height: 150px; /* Reduzido de 220px para melhor proporção no mobile */
+    height: 150px;
     width: 150px;
     border: 3px solid #00E5FF;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 0 25px rgba(0, 229, 255, 0.25); /* Brilho suave Ciano Elétrico */
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.25);
 }
 
 .profile-name {
@@ -41,43 +40,30 @@ body {
     font-weight: 700;
     letter-spacing: 0.5px;
     margin-bottom: 24px;
+    text-align: center;
 }
 
 .links-container {
     width: 100%;
+    max-width: 400px; /* Impede que os botões estiquem na tela toda no desktop */
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
+    margin: 0 auto; /* Garante a centralização absoluta do bloco */
 }
 
 .links {
     text-decoration: none;
     padding: 16px 24px;
-    width: 100%;
+    width: 100%; /* Ocupa 100% do limite de 400px do container */
     background-color: #FFE600;
     color: #1A1A1A;
-    border-radius: 50px; /* Formato de pílula moderno */
+    border-radius: 50px;
     font-weight: 600;
     font-size: 1.05rem;
     display: flex;
     align-items: center;
-    justify-content: center; /* Centraliza o texto perfeitamente */
+    justify-content: center;
     position: relative;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-    border: 2px solid transparent;
-}
-
-.links:hover {
-    transform: translateY(-3px); /* Efeito de flutuação ao passar o mouse */
-    box-shadow: 0 8px 20px rgba(255, 230, 0, 0.3);
-    border-color: #00E5FF; /* Destaque Ciano Elétrico no hover */
-}
-
-.image-link {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-    position: absolute; 
-    left: 24px; /* Mantém o ícone fixo à esquerda sem desalinhar o texto central */
-}
+    transition: transform
